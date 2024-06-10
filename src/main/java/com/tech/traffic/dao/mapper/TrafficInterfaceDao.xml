@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.tech.traffic.dao.TrafficInterfaceDao">
+
+	<select id="getSeoulLineTraffic" resultType="com.tech.traffic.dto.SeoulLineTraffic">
+		SELECT
+		    *
+		FROM
+		    SEOUL_LINE_TRAFFIC
+		WHERE
+		    MONTH = #{param1} AND LINE = #{param2}
+	</select>
+
+</mapper>    
